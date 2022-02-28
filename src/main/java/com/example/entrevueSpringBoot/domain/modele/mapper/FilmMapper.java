@@ -1,11 +1,11 @@
 package com.example.entrevueSpringBoot.domain.modele.mapper;
 
-import com.example.entrevueSpringBoot.domain.modele.dto.FilmDto;
 import com.example.entrevueSpringBoot.domain.modele.entite.Film;
 import org.mapstruct.InjectionStrategy;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.ReportingPolicy;
+import org.openapitools.client.model.FilmDto;
 
 import java.util.List;
 

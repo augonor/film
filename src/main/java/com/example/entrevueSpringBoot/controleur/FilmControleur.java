@@ -1,7 +1,7 @@
 package com.example.entrevueSpringBoot.controleur;
 
-import com.example.entrevueSpringBoot.domain.modele.dto.FilmDto;
 import com.example.entrevueSpringBoot.service.FilmService;
+import org.openapitools.client.model.FilmDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -25,7 +25,7 @@ public class FilmControleur {
     }
 
     @PostMapping(path = "/api/film", produces = "application/json")
-    ResponseEntity<FilmDto> ajouterFilm(@RequestBody FilmDto filmDto) {
+    ResponseEntity<org.openapitools.client.model.FilmDto> ajouterFilm(@RequestBody FilmDto filmDto) {
         return new ResponseEntity(filmService.creerFilm(filmDto), HttpStatus.CREATED);
     }
 

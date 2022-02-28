@@ -1,7 +1,8 @@
 package com.example.entrevueSpringBoot.service;
 
-import com.example.entrevueSpringBoot.domain.modele.dto.FilmDto;
+
 import com.example.entrevueSpringBoot.domain.modele.exception.FilmNotFoundException;
+import org.openapitools.client.model.FilmDto;
 
 import java.util.List;
 

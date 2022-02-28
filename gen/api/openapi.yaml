@@ -1,0 +1,72 @@
+openapi: 3.0.1
+info:
+  description: film description
+  title: film API
+  version: 1.0.0
+servers:
+- url: /
+paths:
+  /api/film/{id}:
+    get:
+      operationId: obtenirFilm
+      parameters:
+      - explode: false
+        in: path
+        name: id
+        required: true
+        schema:
+          format: int64
+          type: integer
+        style: simple
+      responses:
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/filmDto'
+          description: default response
+      x-accepts: application/json
+components:
+  schemas:
+    filmDto:
+      example:
+        titre: titre
+        description: description
+        id: 0
+        acteurs:
+        - id: 6
+          nom: nom
+          prenom: prenom
+        - id: 6
+          nom: nom
+          prenom: prenom
+      properties:
+        id:
+          format: int64
+          type: integer
+        titre:
+          type: string
+        description:
+          type: string
+        acteurs:
+          items:
+            $ref: '#/components/schemas/acteurDto'
+          type: array
+      type: object
+      xml:
+        name: film
+    acteurDto:
+      example:
+        id: 6
+        nom: nom
+        prenom: prenom
+      properties:
+        id:
+          format: int64
+          type: integer
+        nom:
+          type: string
+        prenom:
+          type: string
+      type: object
+

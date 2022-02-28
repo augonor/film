@@ -1,6 +1,5 @@
 package com.example.entrevueSpringBoot.service.impl;
 
-import com.example.entrevueSpringBoot.domain.modele.dto.FilmDto;
 import com.example.entrevueSpringBoot.domain.modele.entite.Acteur;
 import com.example.entrevueSpringBoot.domain.modele.entite.Film;
 import com.example.entrevueSpringBoot.domain.modele.exception.FilmNotFoundException;
@@ -8,6 +7,7 @@ import com.example.entrevueSpringBoot.domain.modele.mapper.FilmMapper;
 import com.example.entrevueSpringBoot.domain.modele.repository.FilmRepository;
 import com.example.entrevueSpringBoot.service.FilmService;
 import lombok.extern.slf4j.Slf4j;
+import org.openapitools.client.model.FilmDto;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
